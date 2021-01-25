@@ -1,0 +1,16 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+.vs
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+STRIPE_KEY=pk_test_51HkvBCCgHkkhDlcmbJBMrxpVyS1WHNo936MpmbsqYRCT2E5sBiXj7Hgk1p3l0hRHJOq3ai5S45Fsl3oemYtv0mEl00abjxVGNm
+STRIPE_SECRET=sk_test_51HkvBCCgHkkhDlcmxE1hLPtUGAXJBamyLMpbonMSCgIOlKYNZRxteQCq5XTJL3vC9aN0yNjYk21hdMpopFyosH8J00tNb69qCX
+ 

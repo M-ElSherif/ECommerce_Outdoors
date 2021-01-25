@@ -1,0 +1,309 @@
+/*
+    Document   : Newstyle.css
+    Created on : 11-Oct-2020, 10:14:53 AM
+    Author     : Maycon Morais
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+h1, h2, h3, h4, h5, h6,
+body, div, p{
+    /*
+    background-color: red;
+    */
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Muli', sans-serif;
+}
+
+.navbar {
+    margin-bottom: 0px !important;
+    border: 0px !important;
+}
+
+.col-md-3{
+    padding: 8px;
+    margin: 0px;
+    border: 0px;
+}
+
+#wrapper{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    /* border: 1px solid #000000; */
+}
+/* make a line to divide header section */
+header{
+    margin: 0px;
+    width: auto;
+    height: auto;
+}
+
+/* put img and text side-side */
+header img{
+    float:left;
+}
+/* align header text in the right side */
+header h1{
+    margin: 5px;
+    text-align: right;
+    margin-bottom: 5px;
+}
+/* text below header text */
+header h2{
+    text-align: right;
+    float: right;
+}
+
+footer p{
+    text-align:center;
+    font-size: 10pt;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Style for cart page*/
+img {
+    max-width: 100%;
+    height: auto;
+    /*background: lightblue;
+    background: radial-gradient(white 30%, lightblue 70%);*/
+}
+
+.img-fluid{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 75px;
+    padding: 0%;
+
+}
+
+.img-cart{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    padding: 1px;
+    align-items: flex-end;
+}
+
+.img-single-prod{
+    width: 200px;
+    height: 180px;
+}
+
+.img-single img {
+    max-width: 100%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.img-single:hover img{
+    -moz-transform: scale(2.0);
+	-webkit-transform: scale(2.0);
+    transform: scale(2.0);
+    padding-left: 60px;
+}
+
+#cart_count {
+    text-align: center;
+    padding: 0 0.9rem 0.1rem 0.9rem;
+    border-radius: 3rem;
+}
+
+.shopping-cart {
+    padding: 3% 0;
+}
+
+.cart-items+.cart-items {
+    padding: 2% 0;
+}
+
+.price-details h6{
+    padding: 3% 2%;
+}
+/* Input text - no border */
+input[type=text] select{
+  transition: width 0.4s ease-in-out;
+  padding: 12px;
+  border-radius: 9px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+}
+
+#reg label{
+    margin-left: 12px;
+    margin-bottom: -5px;
+}
+#reg input{
+    margin-top: 0px;
+}
+
+#contact label{
+    margin-top: 15px;
+}
+
+#contact input{
+    margin-left: 34px;
+}
+
+.form-control{
+    margin: 10px;
+}
+
+#sides{
+    margin:0;
+    display: flex;
+}
+
+#left{
+    float:left;
+    width:14%;
+    overflow:hidden;
+}
+
+#left .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+  }
+
+  #left .list-group {
+    width: 15rem;
+  }
+
+#right{
+    float:left;
+    width:88%;
+    overflow:hidden;
+}
+
+.add-bar-button{
+    text-align: right;
+    margin-right: 250px ;
+}
+
+/*
+    Created on : 11-Nov-2020
+    Author     :Shivashagthy Dharsan
+*/
+.footer-area {
+    /* margin-top: 2em; */
+    clear: both;
+    padding-top:  1em;
+    position: relative;
+  }
+
+.footer1-bg{
+    background-color:#e6e8e9;
+    width:100%;
+    bottom: 0;
+    left: 0;
+    margin-top: 40px;
+}
+.footer2-bg{
+  background-color:#68606d;
+  height:60px;
+  width:100%
+}
+  /* ============================= footer ====================== */
+  footer {
+      padding:30px 0 0 0;
+      font-style:normal;
+      color:#696969;
+      text-align:center 
+    }
+  footer a{
+      color:#fff;
+    }
+  footer a:hover{
+      color:#ccff;
+    }
+  footer p{
+      color:#fff;
+    }
+    /* carousel image size */
+    .carousel-inner > .carousel-item > img, .carousel-inner > .item > a > img {
+        width: 100%;
+        max-height: 568px;
+
+    }
+
+    .list-group li{
+        color: rgb(63, 63, 63);
+    }
+    .list-group-item {
+        color: rgb(255, 255, 255);
+    }
+
+    .sidebar-heading {
+        color: rgb(255, 255, 255);
+    }
+
+    .nav-item{
+        font-size: 12px;
+    }
+
+    .nav-item a{
+        padding-bottom: 0%;
+        padding-top: 0%;
+    }
+
+    .menubar-log ul{
+        vertical-align: bottom; 
+        display: table-cell;
+    }
+
+    .img-prod .img-fluid{
+        position: relative;
+        width: 400px;
+        height: 250px;
+    }
+
+    .carousel-caption{
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1; /* Grey text */
+    }
+
+    .carousel-caption h5{
+        /* font-weight: bold; */
+        color:#f1f1f1;
+      }
+
+    .cart-prod{
+        border: 2px solid #dadada;
+        border-radius: 7px;
+
+        transition: 0.5s ease;
+    }
+    
+    .cart-prod:hover{
+        transform: scale(1.0);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .container h2{
+        font-size: 47px;
+        font-family: "Noto Sans";
+    }
+
+    .home-text p{
+        font-size: 28px;
+        color: rgb(63, 63, 63);
+        font-family: "Lucida Sans Unicode', 'Lucida Grande', sans-serif";
+        padding-top: 6px;
+        text-align: justify; 
+        text-justify: inter-word;
+    }
+
+    .container-fluid{
+        padding-top: 10px;
+    }

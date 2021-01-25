@@ -1,0 +1,19 @@
+.StripeElement {
+    background-color: white;
+    padding: 12px 12px;
+    border: 1px solid #ccc;
+  
+}
+
+.StripeElement--invalid {
+    border-color: #fa755a;
+}
+  
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}
+  
+#card-errors {
+    color: #fa755a;
+}
+  
