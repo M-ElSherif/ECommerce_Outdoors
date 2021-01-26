@@ -1,71 +1,93 @@
-## How to create a local environment to work with this project
-## First, install componser using the link below:
-https://getcomposer.org/download/
-Composer it is a dependency manager for PHP.
+# INSTRUCTIONS
 
+## Install Composer
 
-## Now the next steps it is a suggestion from previous team. Please, follow the steps to run the project locally.
-## We used xampp + MySQL from second term. So please use it.
-##
-## Please, in your PC choose a directory and create a new folder (anyName)
-## Open CMD in the same level of your folder "anyName". Type the command line below and press Enter:
-composer create-project --prefer-dist laravel/laravel anyName
+Composer it is a dependency manager for PHP. Use the following link:
 
-## The installation need to start, and after processed inside the anyName folder must contain a Laravel structure. If it is not, you know what to do, StackOverFlow ;)
+```
+https://getcomposer.org/download/ 
+```
 
-## Well, once you have the structure of the project created please copy the content of this project and paste inside anyName folder replacing all.
+## 2) Download and install MySQL
 
-## Now, open CMD inside the anyName folder. We need to make some intallation to run the project.
-## Install cart:
-composer require hardevine/shoppingcart
+MySQL is the database of choice for this application.If you already have a valid installation, skip this step.
 
-composer require cartalyst/stripe-laravel
+## 3) Download and install XAMPP
 
-## Install Laravel UI to use log in and register functions:
-composer require laravel/ui
+XAMPP is specific for PHP development
 
-## Install Stripe on it:
-composer require stripe/stripe-php
+You will then need to configure your XAMPP MySQL service port to 7331. Click the config button, and select the my.ini file. There you will change
+the port number to 7331. 
 
-## We have used the stripe to figure out the payment system, it is up to you change it.
-https://stripe.com/docs/stripe-js
+## 4) Create the database:
 
-## After all the installation, you are supposed to run the project: Open CDM inside anyName folder and type:
-php artisan serve
-
-The project will run in http://127.0.0.1:8000
-
-## If it is not, you know what to do: StackOverFLow ;)
-
-## Let's create your database, please go to your database: 
-http://localhost:7331/phpmyadmin/
+Head to the php admin page at http://localhost:7331/phpmyadmin/
 
 Create a new schema called: Laravel (use this parameter => utf8mb4_unicode_ci)
 
-## Now open your CMD inside the project folder (anyName) and type:
+
+Proceed to then start the MySQL server instance
+
+## 5) Install Project Depenedencies
+
+Using either your IDE terminal, or your OS CMD change directory into where the project repository resides and run the following:
+
+To install project dependencies (libraries, packages, etc.)
+
+```
+composer install
+```
+
+To generate the .env file for the application.
+
+```
+cp .env.example .env
+
+php artisan key:generate
+
+chmod 777 -R  storage
+```
+
+## 6) Migrate models to database
+
+Using either your IDE terminal, or your OS CMD change directory into where the project repository resides and run the following:
+
+This will migrate all models to the database, correcting the appropriate tables and columns
+
+```
 php artisan migrate
 
 php artisan db:seed
+```
 
-## Alright, your development environment is done. My suggest is use the Visual Studio Code, and create a git repository to 
-## control all the version. Below there are some credentials to be used in the project.
+## 5) Deploy the application
 
-## Project email:
-project.algonquin@gmail.com
-pass: Team@123
+Again in the terminal or OS CMD, change directory into where the project repository resides and run the following:
 
-## https://www.heroku.com/
-username: project.algonquin@gmail.com
-password: algonquin@123
+```
+php artisan serve
+```
 
-## API use for payment system for the project: 
+The application should now be delployed locally at the following address: http://127.0.0.1:8000
+
+# ISSUES
+
+The above instructions have been sucessfully performed from scratch on my local environment. Any problems you run into might stem
+from you own environment, and you will be required to do some troubleshooting (aka. google it)
+
+
+# RESOURCES
+
+## Payment system API: 
 ## https://dashboard.stripe.com/test/dashboard
 ## Stripe account: username:project.algonquin@gmail.com
 ## password: project.algonquin@123
 
-## SOME PROBLEMS THAT WE HAD DURING THE PROJECT:
-## Do you remember how do you resolve the memory space error when you try to install the cart library?
-## just replace it (128 to -1) in the php.ini inside xampp > php
-## Maximum amount of memory a script may consume (128MB)
-## http://php.net/memory-limit
-## memory_limit=-1
+# PREVIOUS TEAM TROUBLESHOOTING:
+
+## How to resolve the memory space error when you try to install the cart library?
+
+Replace it (128 to -1) in the php.ini inside xampp > php
+Maximum amount of memory a script may consume (128MB)
+http://php.net/memory-limit
+memory_limit=-1
