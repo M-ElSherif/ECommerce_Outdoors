@@ -3,8 +3,6 @@
 https://getcomposer.org/download/
 Composer it is a dependency manager for PHP.
 
-## Next, install Laravel using the link below:
-https://laravel.com/docs/8.x/installation
 
 ## Now the next steps it is a suggestion from previous team. Please, follow the steps to run the project locally.
 ## We used xampp + MySQL from second term. So please use it.
