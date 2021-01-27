@@ -16,12 +16,14 @@ MySQL is the database of choice for this application.If you already have a valid
 
 XAMPP is specific for PHP development
 
+Click on the Config button (above the Netstat button), click Service and Port Settings, head to the MySQL tab and change Main Port to 7331 and Service Name to 'mysql'
+
 You will then need to configure your XAMPP MySQL service port to 7331. Click the config button, and select the my.ini file. There you will change
 the port number to 7331. 
 
 ## 4) Create the database:
 
-Head to the php admin page at http://localhost:7331/phpmyadmin/
+Head to the php admin page (click on admin button for MySQL)
 
 Create a new schema called: Laravel (use this parameter => utf8mb4_unicode_ci)
 
