@@ -60,7 +60,7 @@ php artisan migrate
 php artisan db:seed
 ```
 
-## 5) Deploy the application
+## 7) Deploy the application
 
 Again in the terminal or OS CMD, change directory into where the project repository resides and run the following:
 
