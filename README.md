@@ -1,6 +1,6 @@
 # INSTRUCTIONS
 
-## Install Composer
+## 1) Install Composer
 
 Composer it is a dependency manager for PHP. Use the following link:
 
@@ -79,11 +79,12 @@ from you own environment, and you will be required to do some troubleshooting (a
 # RESOURCES
 
 ## Payment system API: 
-## https://dashboard.stripe.com/test/dashboard
-## Stripe account: username:project.algonquin@gmail.com
-## password: project.algonquin@123
+https://dashboard.stripe.com/test/dashboard
+Stripe account Information 
+username:project.algonquin@gmail.com
+password: project.algonquin@123
 
-# PREVIOUS TEAM TROUBLESHOOTING:
+# TROUBLESHOOTING:
 
 ## How to resolve the memory space error when you try to install the cart library?
 
