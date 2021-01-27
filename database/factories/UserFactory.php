@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-// asdas
+// asdasd
 class UserFactory extends Factory
 {
     /**
