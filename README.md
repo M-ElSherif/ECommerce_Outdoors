@@ -54,7 +54,7 @@ chmod 777 -R  storage
 
 Using either your IDE terminal, or your OS CMD change directory into where the project repository resides and run the following:
 
-This will migrate all models to the database, correcting the appropriate tables and columns
+This will migrate all models to the database, creating the appropriate tables and columns, and initializing the database with initial records
 
 ```
 php artisan migrate
