@@ -1,18 +1,10 @@
 # INSTRUCTIONS
 
-## 1) Install Composer
-
-Composer is a dependency manager for PHP. Use the following link:
-
-```
-https://getcomposer.org/download/ 
-```
-
-## 2) Download and install MySQL
+## 1) Download and install MySQL
 
 MySQL is the database of choice for this application.If you already have a valid installation, skip this step.
 
-## 3) Download and install XAMPP
+## 2) Download and install XAMPP
 
 XAMPP is specific for PHP development
 
@@ -20,6 +12,14 @@ Click on the Config button (above the Netstat button), click Service and Port Se
 
 You will then need to configure your XAMPP MySQL service port to 7331. Click the config button, and select the my.ini file. There you will change
 the port number to 7331. 
+
+## 3) Install Composer
+
+Composer is a dependency manager for PHP. Use the following link:
+
+```
+https://getcomposer.org/download/ 
+```
 
 ## 4) Create the database:
 
