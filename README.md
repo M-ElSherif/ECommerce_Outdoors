@@ -42,19 +42,19 @@ composer install
 
 To generate the .env file for the application.
 
-```
-cp .env.example .env
+Head to our project folder, and copy and paste the .env.example file and name it .env
 
-php artisan key:generate
-
-chmod 777 -R  storage
-```
 
 ## 6) Migrate models to database
 
 Using either your IDE terminal, or your OS CMD change directory into where the project repository resides and run the following:
 
 This will migrate all models to the database, creating the appropriate tables and columns, and initializing the database with initial records
+
+```
+php artisan key:generate
+
+```
 
 ```
 php artisan migrate
