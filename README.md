@@ -2,7 +2,7 @@
 
 ## 1) Install Composer
 
-Composer it is a dependency manager for PHP. Use the following link:
+Composer is a dependency manager for PHP. Use the following link:
 
 ```
 https://getcomposer.org/download/ 
@@ -25,7 +25,7 @@ the port number to 7331.
 
 Head to the php admin page (click on admin button for MySQL)
 
-Create a new schema called: Laravel (use this parameter => utf8mb4_unicode_ci)
+Create a new schema called: laravel (use this parameter => utf8mb4_unicode_ci)
 
 
 Proceed to then start the MySQL server instance
