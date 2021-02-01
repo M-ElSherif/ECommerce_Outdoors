@@ -53,7 +53,6 @@ This will migrate all models to the database, creating the appropriate tables an
 
 ```
 php artisan key:generate
-
 ```
 
 ```
