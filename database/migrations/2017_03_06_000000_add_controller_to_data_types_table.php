@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAdminsTable extends Migration
+class AddControllerToDataTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateAdminsTable extends Migration
      */
     public function up()
     {
-        Schema::create('admins', function (Blueprint $table) {
-            $table->increments('id')->unique();
-            $table->string('username');
-            $table->string('password');
+        Schema::table('data_types', function (Blueprint $table) {
+            $table->string('controller')->nullable()->after('model_name');
         });
     }
 
@@ -27,6 +25,8 @@ class CreateAdminsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admins');
+        Schema::table('data_types', function (Blueprint $table) {
+            $table->dropColumn('controller');
+        });
     }
 }

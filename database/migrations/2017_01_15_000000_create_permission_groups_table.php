@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateContactsTable extends Migration
+class CreatePermissionGroupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateContactsTable extends Migration
      */
     public function up()
     {
-        Schema::create('contacts', function (Blueprint $table) {
-            $table->increments('id')->unique();
-            $table->string('name');
-            $table->string('email');
-            $table->text('message');
-            $table->timestamps();
+        Schema::create('permission_groups', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->unique();
         });
     }
 
@@ -29,6 +26,6 @@ class CreateContactsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contacts');
+        Schema::dropIfExists('permission_groups');
     }
 }

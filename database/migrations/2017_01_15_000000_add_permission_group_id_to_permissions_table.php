@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoriesTable extends Migration
+class AddPermissionGroupIdToPermissionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
-            $table->increments('id')->unique();
-            $table->string('name');
-            $table->string('description');
+        Schema::table('permissions', function (Blueprint $table) {
+            $table->integer('permission_group_id')->unsigned()->nullable()->default(null);
         });
     }
 
@@ -27,6 +25,8 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::table('permissions', function (Blueprint $table) {
+            $table->dropColumn('permission_group_id');
+        });
     }
 }

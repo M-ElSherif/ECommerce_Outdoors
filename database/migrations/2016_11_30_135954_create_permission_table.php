@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLoginsTable extends Migration
+class CreatePermissionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateLoginsTable extends Migration
      */
     public function up()
     {
-        Schema::create('logins', function (Blueprint $table) {
-            $table->increments('id')->unique();
-            $table->integer('customer_id')->references('id')->on('customers')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('email')->unique();
-            $table->string('password');
+        Schema::create('permissions', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('key')->index();
+            $table->string('table_name');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateLoginsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('logins');
+        Schema::dropIfExists('permissions');
     }
 }

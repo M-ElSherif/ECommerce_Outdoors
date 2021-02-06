@@ -1,47 +1,33 @@
 <?php
 
-namespace Database\Seeders;
-
-use App\Models\Categories;
 use Illuminate\Database\Seeder;
+use TCG\Voyager\Models\Category;
 
 class CategoriesTableSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Auto generated seed file.
      *
      * @return void
      */
     public function run()
     {
-        Categories::create([
-            'id' => 1,
-            'name' => 'Healthy & Beauty',
-            'description' => 'description category 1'
+        $category = Category::firstOrNew([
+            'slug' => 'category-1',
         ]);
+        if (!$category->exists) {
+            $category->fill([
+                'name' => 'Category 1',
+            ])->save();
+        }
 
-        Categories::create([
-            'id' => 2,
-            'name' => 'Clothing & Shoes',
-            'description' => 'description category 2'
+        $category = Category::firstOrNew([
+            'slug' => 'category-2',
         ]);
-
-        Categories::create([
-            'id' => 3,
-            'name' => 'Sports & Outdoors',
-            'description' => 'description category 3'
-        ]);
-
-        Categories::create([
-            'id' => 4,
-            'name' => 'Grocery & Whole Foods',
-            'description' => 'description category 4'
-        ]);
-
-        Categories::create([
-            'id' => 5,
-            'name' => 'Computer & Accessories',
-            'description' => 'description category 5'
-        ]);
+        if (!$category->exists) {
+            $category->fill([
+                'name' => 'Category 2',
+            ])->save();
+        }
     }
 }

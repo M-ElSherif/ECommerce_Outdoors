@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\AdminController;
-use Illuminate\Support\Facades\Route;   
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,3 +71,6 @@ Route::post('/contact', 'App\Http\Controllers\ContactController@store')->name('c
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/search', 'ShopController@search')->name('search');
